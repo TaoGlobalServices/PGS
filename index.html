@@ -3,26 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Oasis Plus | Premium Export to Maldives</title>
+    <title>Oasis Plus | Premium Perishable Export</title>
     
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;800&family=Prompt:wght@400;600&family=Noto+Sans+Thaana:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
     <style>
-        :root { --navy: #0f172a; --emerald: #10b981; }
+        :root { --navy: #0f172a; --emerald: #10b981; --amber: #fbbf24; }
         body { font-family: 'Inter', 'Prompt', 'Noto Sans Thaana', sans-serif; transition: all 0.3s ease; }
         
-        /* Language Display Logic */
-        [lang="th"] .lang-en, [lang="th"] .lang-dv,
-        [lang="en"] .lang-th, [lang="en"] .lang-dv,
-        [lang="dv"] .lang-en, [lang="dv"] .lang-th { display: none; }
+        /* Language Visibility Switcher */
+        body[lang="th"] .lang-en, body[lang="th"] .lang-dv,
+        body[lang="en"] .lang-th, body[lang="en"] .lang-dv,
+        body[lang="dv"] .lang-en, body[lang="dv"] .lang-th { display: none; }
 
-        /* RTL Logic for Maldives Language */
-        [dir="rtl"] { text-align: right; }
+        /* Language Button Active State */
+        .lang-btn.active {
+            background-color: white;
+            color: var(--emerald);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
         .bg-navy { background-color: var(--navy); }
         .bg-emerald { background-color: var(--emerald); }
         .text-emerald { color: var(--emerald); }
+        
+        /* Right-to-Left for Dhivehi */
+        body[dir="rtl"] .text-left { text-align: right; }
+        body[dir="rtl"] .ml-auto { margin-right: auto; margin-left: 0; }
     </style>
 </head>
 <body lang="en" dir="ltr" class="bg-white text-slate-800">
@@ -30,46 +39,41 @@
     <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-md border-b border-slate-100 shadow-sm">
         <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
             <div class="flex items-center gap-2">
-                <div class="w-10 h-10 bg-emerald rounded-lg flex items-center justify-center text-white font-bold text-xl">OP</div>
+                <div class="w-10 h-10 bg-emerald rounded-lg flex items-center justify-center text-white font-bold text-xl shadow-lg">OP</div>
                 <span class="text-2xl font-black text-slate-900 uppercase">Oasis<span class="text-emerald">Plus</span></span>
             </div>
 
-            <div class="flex items-center gap-4">
-                <div class="hidden lg:flex gap-8 text-xs font-bold uppercase tracking-widest mr-4">
-                    <a href="#home" class="hover:text-emerald">
-                        <span class="lang-en">Home</span><span class="lang-th">หน้าแรก</span><span class="lang-dv">ފުރަތަމަ ސަފުހާ</span>
-                    </a>
-                    <a href="#products" class="hover:text-emerald">
-                        <span class="lang-en">Products</span><span class="lang-th">สินค้า</span><span class="lang-dv">އުފެއްދުންތައް</span>
-                    </a>
+            <div class="flex items-center gap-6">
+                <div class="flex bg-slate-100 rounded-full p-1 border border-slate-200 shadow-inner">
+                    <button onclick="setLang('en')" id="btn-en" class="lang-btn px-3 py-1 rounded-full text-[10px] font-black transition-all">EN</button>
+                    <button onclick="setLang('th')" id="btn-th" class="lang-btn px-3 py-1 rounded-full text-[10px] font-black transition-all">TH</button>
+                    <button onclick="setLang('dv')" id="btn-dv" class="lang-btn px-3 py-1 rounded-full text-[11px] font-bold transition-all">ދިވެހި</button>
                 </div>
-
-                <div class="flex bg-slate-100 rounded-full p-1 text-[10px] font-bold border border-slate-200 shadow-inner">
-                    <button onclick="setLang('en')" class="px-3 py-1 rounded-full hover:bg-white hover:shadow-sm transition">EN</button>
-                    <button onclick="setLang('th')" class="px-3 py-1 rounded-full hover:bg-white hover:shadow-sm transition">TH</button>
-                    <button onclick="setLang('dv')" class="px-3 py-1 rounded-full hover:bg-white hover:shadow-sm transition font-normal">ދިވެހި</button>
-                </div>
+                <a href="#contact" class="hidden md:block bg-navy text-white px-6 py-2.5 rounded-full text-xs font-bold uppercase tracking-widest hover:bg-emerald transition">
+                    <span class="lang-en">Inquiry</span><span class="lang-th">ติดต่อเรา</span><span class="lang-dv">ގުޅުއްވުމަށް</span>
+                </a>
             </div>
         </div>
     </nav>
 
-    <section id="home" class="relative h-[85vh] flex items-center overflow-hidden bg-navy text-white">
-        <div class="absolute inset-0 opacity-40">
+    <section id="home" class="relative h-[85vh] flex items-center overflow-hidden bg-navy">
+        <div class="absolute inset-0 opacity-50 z-0">
             <img src="https://images.unsplash.com/photo-1610348725531-843dff563e2c?auto=format&fit=crop&q=80&w=2000" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent"></div>
         </div>
-        <div class="relative z-10 max-w-7xl mx-auto px-6">
-            <h1 class="text-5xl lg:text-8xl font-black mb-6 leading-tight">
-                <span class="lang-en text-emerald">Superior Freshness.</span>
-                <span class="lang-th text-emerald">คุณภาพความสดใหม่</span>
-                <span class="lang-dv text-emerald">މަތީ ފެންވަރުގެ ތާޒާކަން</span>
+        <div class="relative z-10 max-w-7xl mx-auto px-6 text-white">
+            <h1 class="text-5xl lg:text-8xl font-black mb-8 leading-tight">
+                <span class="lang-en">Superior <br><span class="text-emerald">Freshness.</span></span>
+                <span class="lang-th">คุณภาพ <br><span class="text-emerald">ความสดใหม่</span></span>
+                <span class="lang-dv">މަތީ ފެންވަރުގެ <br><span class="text-emerald">ތާޒާކަން.</span></span>
             </h1>
-            <p class="text-xl lg:text-2xl mb-10 max-w-2xl opacity-90">
+            <p class="text-xl lg:text-2xl mb-12 max-w-2xl opacity-90 leading-relaxed">
                 <span class="lang-en">Direct from Thai farms to Maldives luxury resorts.</span>
-                <span class="lang-th">ส่งตรงจากไร่ไทย สู่รีสอร์ทหรูในมัลดีฟส์</span>
-                <span class="lang-dv">ތައިލެންޑުގެ ދަނޑުވެރިކަމުން ސީދާ ރާއްޖޭގެ ރިސޯޓްތަކަށް</span>
+                <span class="lang-th">ส่งตรงจากไร่ไทย สู่รีสอร์ทหรูในมัลดีฟส์ ด้วยมาตรฐานระดับสากล</span>
+                <span class="lang-dv">ތައިލެންޑުގެ ދަނޑުވެރިކަމުން ސީދާ ރާއްޖޭގެ ރިސޯޓްތަކަށް އެންމެ ތާޒާކަމާއެކު.</span>
             </p>
             <a href="#contact" class="px-10 py-5 bg-emerald text-white rounded-xl font-bold hover:opacity-90 transition inline-block shadow-2xl">
-                <span class="lang-en">Request Quote</span><span class="lang-th">ขอใบเสนอราคา</span><span class="lang-dv">ކޯޓޭޝަން ބޭނުން</span>
+                <span class="lang-en">Contact Now</span><span class="lang-th">สอบถามข้อมูล</span><span class="lang-dv">ގުޅުއްވުމަށް</span>
             </a>
         </div>
     </section>
@@ -77,25 +81,25 @@
     <section id="products" class="py-24 bg-slate-50">
         <div class="max-w-7xl mx-auto px-6 text-center">
             <h2 class="text-4xl font-black mb-16 text-navy">
-                <span class="lang-en">Our Commodities</span><span class="lang-th">สินค้าของเรา</span><span class="lang-dv">އަޅުގަނޑުމެންގެ ތަކެތި</span>
+                <span class="lang-en">Our Products</span><span class="lang-th">สินค้าพรีเมียมของเรา</span><span class="lang-dv">އަޅުގަނޑުމެންގެ އުފެއްދުންތައް</span>
             </h2>
             <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-white p-8 rounded-3xl shadow-sm border-b-4 border-emerald">
-                    <div class="text-4xl mb-4">🥭</div>
-                    <h3 class="text-xl font-bold mb-2">
-                        <span class="lang-en">Fresh Produce</span><span class="lang-th">ผักและผลไม้สด</span><span class="lang-dv">ތަރުކާރީ އާއި މޭވާ</span>
+                <div class="bg-white p-10 rounded-3xl shadow-sm border-b-4 border-emerald transition hover:shadow-xl">
+                    <div class="text-4xl mb-6">🥭</div>
+                    <h3 class="text-2xl font-bold mb-2">
+                        <span class="lang-en">Produce</span><span class="lang-th">ผักและผลไม้สด</span><span class="lang-dv">ތާޒާ މޭވާ</span>
                     </h3>
                 </div>
-                <div class="bg-white p-8 rounded-3xl shadow-sm border-b-4 border-amber-400">
-                    <div class="text-4xl mb-4">🥚</div>
-                    <h3 class="text-xl font-bold mb-2">
+                <div class="bg-white p-10 rounded-3xl shadow-sm border-b-4 border-amber-400 transition hover:shadow-xl">
+                    <div class="text-4xl mb-6">🥚</div>
+                    <h3 class="text-2xl font-bold mb-2">
                         <span class="lang-en">Fresh Eggs</span><span class="lang-th">ไข่ไก่สด</span><span class="lang-dv">ތާޒާ ބިސް</span>
                     </h3>
                 </div>
-                <div class="bg-white p-8 rounded-3xl shadow-sm border-b-4 border-blue-500">
-                    <div class="text-4xl mb-4">🏨</div>
-                    <h3 class="text-xl font-bold mb-2">
-                        <span class="lang-en">Resort Supply</span><span class="lang-th">สินค้าโรงแรม</span><span class="lang-dv">ރިސޯޓް ސަޕްލައި</span>
+                <div class="bg-white p-10 rounded-3xl shadow-sm border-b-4 border-navy transition hover:shadow-xl">
+                    <div class="text-4xl mb-6">🏨</div>
+                    <h3 class="text-2xl font-bold mb-2">
+                        <span class="lang-en">Hotel Supply</span><span class="lang-th">วัตถุดิบรีสอร์ท</span><span class="lang-dv">ރިސޯޓް ސަޕްލައި</span>
                     </h3>
                 </div>
             </div>
@@ -104,41 +108,51 @@
 
     <section id="contact" class="py-24 bg-navy text-white">
         <div class="max-w-4xl mx-auto px-6 text-center">
-            <h2 class="text-3xl font-bold mb-12">
-                <span class="lang-en">Inquiry Form</span><span class="lang-th">แบบฟอร์มติดต่อสอบถาม</span><span class="lang-dv">ގުޅުއްވުމަށް</span>
+            <h2 class="text-4xl font-bold mb-12">
+                <span class="lang-en">Inquiry Form</span><span class="lang-th">แบบฟอร์มติดต่อสอบถาม</span><span class="lang-dv">ގުޅުއްވުމަށް ފޯމު</span>
             </h2>
+            
             <form action="https://formspree.io/f/mojqeqaz" method="POST" class="grid gap-4 text-left" dir="ltr">
-                <input type="text" name="name" required placeholder="Full Name" class="bg-slate-800 border-none rounded-xl p-4 text-white outline-none">
-                <input type="email" name="email" required placeholder="Email Address" class="bg-slate-800 border-none rounded-xl p-4 text-white outline-none">
-                <textarea name="message" rows="4" required placeholder="Details of your requirement" class="bg-slate-800 border-none rounded-xl p-4 text-white outline-none"></textarea>
+                <div class="grid md:grid-cols-2 gap-4">
+                    <input type="text" name="name" required placeholder="Full Name / ชื่อผู้ติดต่อ" class="bg-slate-800 border-none rounded-xl p-4 text-white outline-none focus:ring-2 focus:ring-emerald">
+                    <input type="email" name="email" required placeholder="Email Address / อีเมล" class="bg-slate-800 border-none rounded-xl p-4 text-white outline-none focus:ring-2 focus:ring-emerald">
+                </div>
+                <textarea name="message" rows="5" required placeholder="Inquiry Details / รายละเอียดสินค้าที่คุณต้องการ" class="bg-slate-800 border-none rounded-xl p-4 text-white outline-none focus:ring-2 focus:ring-emerald"></textarea>
                 <button type="submit" class="py-5 bg-emerald text-white rounded-xl font-bold hover:bg-emerald-400 transition-all shadow-xl">
-                    <span class="lang-en">Submit</span><span class="lang-th">ส่งข้อมูล</span><span class="lang-dv">ފޮނުވާލަން</span>
+                    <span class="lang-en">Submit Inquiry</span><span class="lang-th">ส่งข้อมูลติดต่อ</span><span class="lang-dv">ފޮނުވާލަން</span>
                 </button>
             </form>
         </div>
     </section>
 
     <footer class="py-12 border-t text-center text-slate-400 text-sm">
-        © 2026 Oasis Plus Co., Ltd. | Bangkok - Maldives
+        © 2026 Oasis Plus Co., Ltd. | Bangkok, TH - Male City, MV
     </footer>
 
     <script>
         function setLang(lang) {
             document.body.setAttribute('lang', lang);
             
-            // If Dhivehi (dv), set direction to RTL, otherwise LTR
+            // Toggle Direction for Dhivehi
             if (lang === 'dv') {
                 document.body.setAttribute('dir', 'rtl');
             } else {
                 document.body.setAttribute('dir', 'ltr');
             }
+
+            // Update Active Button Style
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            document.getElementById('btn-' + lang).classList.add('active');
             
-            localStorage.setItem('oasisLang', lang);
+            // Save preference
+            localStorage.setItem('oasisPrefLang', lang);
         }
 
-        // Initialize saved language
+        // Initialize saved language or default to English
         window.onload = () => {
-            const saved = localStorage.getItem('oasisLang') || 'en';
+            const saved = localStorage.getItem('oasisPrefLang') || 'en';
             setLang(saved);
         };
     </script>
