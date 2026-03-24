@@ -3,115 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Oasis Plus | Premium Thai Fruit Exports</title>
+    <title>Oasis Plus | Premium Thai Fruit Exporter | Wholesale Mango & Durian</title>
+    <meta name="description" content="Oasis Plus is a leading Thai fruit exporter. We supply GAP-certified Nam Dok Mai Mango, Monthong Durian, and Young Coconut to global markets.">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <style>
-        .hero-gradient { background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1619566636858-adf3ef46400b?auto=format&fit=crop&q=80&w=1920'); background-size: cover; background-position: center; }
-        .accent-gold { color: #D4AF37; }
-        .bg-oasis-green { background-color: #1B4332; }
-    </style>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WholesaleStore",
+      "name": "Oasis Plus",
+      "description": "Premium Thai Fruit Exporter",
+      "address": {"@type": "PostalAddress", "addressLocality": "Bangkok", "addressCountry": "TH"}
+    }
+    </script>
 </head>
-<body class="font-sans text-gray-800">
+<body class="bg-slate-50 font-sans text-slate-900">
 
     <nav class="bg-white shadow-md sticky top-0 z-50">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="text-2xl font-bold text-green-800">OASIS<span class="accent-gold">PLUS</span></div>
-            <div class="hidden md:flex space-x-8 font-semibold">
-                <a href="index.html" class="hover:text-green-700">Home</a>
-                <a href="#about" class="hover:text-green-700">About</a>
-                <a href="#products" class="hover:text-green-700">Products</a>
-                <a href="#logistics" class="hover:text-green-700">Logistics</a>
-                <a href="#contact" class="bg-oasis-green text-white px-4 py-2 rounded-lg">Inquiry</a>
+            <a href="index.html" class="text-3xl font-black text-emerald-900 tracking-tighter">OASIS<span class="text-yellow-500">PLUS</span></a>
+            <div class="hidden md:flex space-x-8 font-bold text-sm uppercase">
+                <a href="index.html" class="text-yellow-600">Home</a>
+                <a href="about.html" class="hover:text-yellow-600 transition">About</a>
+                <a href="products.html" class="hover:text-yellow-600 transition">Products</a>
+                <a href="logistics.html" class="hover:text-yellow-600 transition">Logistics</a>
+                <a href="contact.html" class="bg-emerald-800 text-white px-5 py-2 rounded-full hover:bg-emerald-700">Inquiry</a>
             </div>
         </div>
     </nav>
 
-    <header class="hero-gradient h-[600px] flex items-center justify-center text-center text-white px-4">
-        <div>
-            <h1 class="text-5xl md:text-7xl font-bold mb-4">The Source of Freshness</h1>
-            <p class="text-xl md:text-2xl mb-8 max-w-2xl mx-auto">Connecting Thailand's finest orchards to global markets with Oasis Plus premium standards.</p>
-            <a href="#products" class="bg-yellow-500 hover:bg-yellow-600 text-black font-bold py-3 px-8 rounded-full transition">View Our Catalog</a>
+    <header class="relative h-[80vh] flex items-center justify-center">
+        <img src="https://images.unsplash.com/photo-1590779033100-9f60705a2f3b?q=80&w=2070&auto=format&fit=crop" class="absolute inset-0 w-full h-full object-cover brightness-50" alt="Thai Agricultural Landscape">
+        <div class="relative text-center text-white px-4 max-w-4xl">
+            <h1 class="text-5xl md:text-7xl font-bold mb-6">Premium Tropical Exports</h1>
+            <p class="text-xl mb-10 opacity-90 font-light">Connecting Thailand's finest orchards to global markets with Oasis Plus quality standards.</p>
+            <a href="products.html" class="bg-yellow-500 text-emerald-900 font-black py-4 px-12 rounded-lg text-lg uppercase shadow-2xl hover:scale-105 transition-transform inline-block">Explore Catalog</a>
         </div>
     </header>
 
-    <section id="about" class="py-20 bg-gray-50">
-        <div class="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
-            <div>
-                <h2 class="text-3xl font-bold text-green-900 mb-6">Why Choose Oasis Plus?</h2>
-                <p class="text-gray-600 mb-4">Just like a desert oasis, we provide life and freshness in the global supply chain. We specialize in A-Grade tropical fruits, ensuring that every piece of produce meets international GAP and HACCP standards.</p>
-                <ul class="space-y-3">
-                    <li><i class="fas fa-check-circle text-green-600 mr-2"></i> Daily Sourcing from Thai Global GAP Farms</li>
-                    <li><i class="fas fa-check-circle text-green-600 mr-2"></i> Cold-Chain Integrity (Farm to Port)</li>
-                    <li><i class="fas fa-check-circle text-green-600 mr-2"></i> Custom Retail & Wholesale Packaging</li>
-                </ul>
-            </div>
-            <div class="rounded-lg overflow-hidden shadow-xl">
-                <img src="https://images.unsplash.com/photo-1595855759920-86582396756a?auto=format&fit=crop&q=80&w=800" alt="Fresh Fruit Selection">
-            </div>
+    <section class="py-16 bg-white border-b">
+        <div class="container mx-auto px-6 grid md:grid-cols-4 gap-8 text-center">
+            <div><i class="fas fa-certificate text-3xl text-yellow-500 mb-4"></i><h3 class="font-bold">Global GAP</h3></div>
+            <div><i class="fas fa-plane text-3xl text-yellow-500 mb-4"></i><h3 class="font-bold">Air & Sea Freight</h3></div>
+            <div><i class="fas fa-leaf text-3xl text-yellow-500 mb-4"></i><h3 class="font-bold">100% Fresh</h3></div>
+            <div><i class="fas fa-check-double text-3xl text-yellow-500 mb-4"></i><h3 class="font-bold">HACCP Certified</h3></div>
         </div>
     </section>
 
-    <section id="products" class="py-20">
-        <div class="container mx-auto px-6 text-center">
-            <h2 class="text-3xl font-bold text-green-900 mb-12">Our Premium Exports</h2>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-white rounded-lg shadow-lg overflow-hidden border-b-4 border-yellow-500">
-                    <img src="https://images.unsplash.com/photo-1591073113125-e46713c829ed?auto=format&fit=crop&q=80&w=500" class="w-full h-64 object-cover" alt="Mango">
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2">Nam Dok Mai Mango</h3>
-                        <p class="text-gray-600 text-sm mb-4">Thailand's most famous sweet mango. Perfect for premium retail.</p>
-                        <span class="text-xs font-bold uppercase tracking-widest bg-green-100 text-green-800 px-2 py-1">Available Now</span>
-                    </div>
-                </div>
-                <div class="bg-white rounded-lg shadow-lg overflow-hidden border-b-4 border-yellow-500">
-                    <img src="https://images.unsplash.com/photo-1528821128474-27f963b062bf?auto=format&fit=crop&q=80&w=500" class="w-full h-64 object-cover" alt="Durian">
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2">Monthong Durian</h3>
-                        <p class="text-gray-600 text-sm mb-4">The King of Fruits. Sourced from the best Chanthaburi orchards.</p>
-                        <span class="text-xs font-bold uppercase tracking-widest bg-green-100 text-green-800 px-2 py-1">Export Grade A</span>
-                    </div>
-                </div>
-                <div class="bg-white rounded-lg shadow-lg overflow-hidden border-b-4 border-yellow-500">
-                    <img src="https://images.unsplash.com/photo-1521305916504-4a1121188589?auto=format&fit=crop&q=80&w=500" class="w-full h-64 object-cover" alt="Coconut">
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2">Young Fragrant Coconut</h3>
-                        <p class="text-gray-600 text-sm mb-4">Directly from Ratchaburi. Refreshing and sweet all year round.</p>
-                        <span class="text-xs font-bold uppercase tracking-widest bg-green-100 text-green-800 px-2 py-1">Sea/Air Freight</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer id="contact" class="bg-oasis-green text-white py-12">
-        <div class="container mx-auto px-6 grid md:grid-cols-3 gap-12">
-            <div>
-                <h3 class="text-xl font-bold mb-4">Oasis Plus Export Co., Ltd.</h3>
-                <p class="text-gray-300">Your trusted partner for fresh Thai produce to Asia, Europe, and beyond.</p>
-            </div>
-            <div>
-                <h3 class="text-xl font-bold mb-4">Quick Links</h3>
-                <ul class="text-gray-300 space-y-2">
-                    <li><a href="#" class="hover:text-white transition">Quality Certifications</a></li>
-                    <li><a href="#" class="hover:text-white transition">Shipping Schedules</a></li>
-                    <li><a href="#" class="hover:text-white transition">Request a Quote</a></li>
-                </ul>
-            </div>
-            <div>
-                <h3 class="text-xl font-bold mb-4">Connect With Us</h3>
-                <p class="text-gray-300 mb-2">Email: sales@oasisplus.com</p>
-                <p class="text-gray-300 mb-4">WhatsApp: +66 8x xxx xxxx</p>
-                <div class="flex space-x-4">
-                    <a href="#" class="text-2xl hover:text-yellow-500"><i class="fab fa-linkedin"></i></a>
-                    <a href="#" class="text-2xl hover:text-yellow-500"><i class="fab fa-whatsapp-square"></i></a>
-                </div>
-            </div>
-        </div>
-        <div class="text-center mt-12 border-t border-gray-700 pt-6 text-gray-500 text-sm">
-            &copy; 2026 Oasis Plus. All rights reserved.
+    <footer class="bg-emerald-950 text-white py-12">
+        <div class="container mx-auto px-6 text-center border-t border-emerald-800 pt-8">
+            <p>&copy; 2026 Oasis Plus Export. All rights reserved.</p>
         </div>
     </footer>
-
 </body>
 </html>
