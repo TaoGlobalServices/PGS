@@ -48,6 +48,10 @@
 
         h1, h2, h3, h4 { color: var(--primary); font-weight: 700; }
         h1 { font-size: clamp(2.0rem, 4.5vw, 3.2rem); line-height: 1.2; margin-bottom: 24px; text-transform: capitalize; }
+        
+        /* FIX: Ensure hero headline is always white against the dark background */
+        .hero h1 { color: var(--white); }
+        
         h2 { font-size: clamp(1.8rem, 3vw, 2.2rem); margin-bottom: 1.5rem; text-align: center; }
         h2::after { content: ''; display: block; width: 50px; height: 4px; background: var(--accent); margin: 15px auto 0; }
         
@@ -373,7 +377,7 @@
                         <div class="card-body">
                             <h3>Fresh Vegetables</h3>
                             <ul class="spec-list">
-                                <li><i class="fa-solid fa-box-open"></i> <strong>Packaging:</strong> Corrugated export cartons</li>
+                                <li><i class="fa-solid fa-box-open"></i> <strong>Packaging:</strong> EPS foam box with ice gel packs</li>
                                 <li><i class="fa-solid fa-plane-departure"></i> <strong>Shipping:</strong> Scheduled Air Freight</li>
                                 <li><i class="fa-solid fa-weight-scale"></i> <strong>MOQ:</strong> 100kg minimum</li>
                                 <li><i class="fa-solid fa-list-check"></i> <strong>Items:</strong> Asparagus, Baby Corn, Lemongrass, Sweet Basil</li>
@@ -427,9 +431,9 @@
             <div class="container">
                 <div class="split-row">
                     <div>
-                        <h2 style="text-align: left;">Direct Operational Accountability</h2>
-                        <p style="font-size: 1.1rem; color: var(--text-dark); margin-bottom: 20px;">When you partner with Oasis Plus Export Co., Ltd., you communicate directly with our in-house export team stationed in Bangkok.</p>
-                        <p style="font-size: 1.1rem; color: var(--text-dark);">We do not route communications through third-party brokers. From the initial submission of your requirements to the final clearance at your destination port, a dedicated project coordinator is assigned to manage your account, ensuring full accountability for your shipment's execution and timeline.</p>
+                        <h2 style="text-align: left;">Lean Operations, Competitive Pricing</h2>
+                        <p style="font-size: 1.1rem; color: var(--text-dark); margin-bottom: 20px;">We operate as a highly specialized, lean sourcing team. By keeping our operational overhead low, we can offer highly competitive B2B pricing without compromising on rigorous quality control or dispatch timelines.</p>
+                        <p style="font-size: 1.1rem; color: var(--text-dark);">When you partner with us, you communicate directly with our core team in Bangkok. There are no corporate bottlenecks, no third-party brokers, and no hidden fees—just direct accountability for your shipments from farm to port.</p>
                     </div>
                     <div style="text-align: center;">
                         <i class="fa-solid fa-users-gear" style="font-size: 8rem; color: var(--primary); opacity: 0.1;"></i>
