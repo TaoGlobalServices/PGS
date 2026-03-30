@@ -46,6 +46,12 @@
         .btn-back { display: inline-flex; align-items: center; gap: 8px; color: var(--accent); text-decoration: none; font-weight: 600; margin-bottom: 20px; transition: var(--transition); }
         .btn-back:hover { color: white; }
 
+        /* NEW BANNER STYLE */
+        .consolidation-banner { background: var(--bg-light); border-left: 4px solid var(--accent); padding: 25px; border-radius: 4px; margin-bottom: 40px; display: flex; align-items: flex-start; gap: 20px; box-shadow: var(--shadow-card); }
+        .consolidation-banner i { color: var(--primary); font-size: 1.8rem; margin-top: 3px; }
+        .consolidation-banner h4 { margin-bottom: 8px; color: var(--primary); font-size: 1.1rem; }
+        .consolidation-banner p { margin: 0; font-size: 0.95rem; color: var(--text-gray); line-height: 1.6; }
+
         .category-title { margin-top: 40px; padding-bottom: 10px; border-bottom: 2px solid var(--bg-light); text-align: left; }
         .category-title::after { display: none; }
 
@@ -71,6 +77,7 @@
             .nav-menu { position: fixed; top: 60px; left: -100%; width: 100%; background: white; flex-direction: column; padding: 40px; text-align: center; transition: 0.4s; box-shadow: 0 10px 10px rgba(0,0,0,0.05); }
             .nav-menu.active { left: 0; }
             .hamburger { display: block; }
+            .consolidation-banner { flex-direction: column; gap: 10px; }
         }
     </style>
 </head>
@@ -102,6 +109,14 @@
     <section class="section">
         <div class="container">
             
+            <div class="consolidation-banner">
+                <i class="fa-solid fa-boxes-packing"></i>
+                <div>
+                    <h4>Mixed & Consolidated Shipments</h4>
+                    <p>The catalog below highlights our highest-volume weekly exports. <strong>We source and supply all varieties of fresh Thai vegetables and herbs.</strong> We specialize in mixing and consolidating dozens of different items into a single, highly efficient air freight shipment to meet the exact demands of your commercial kitchen or retail operation. If you need it, we can source it.</p>
+                </div>
+            </div>
+
             <h2 class="category-title">Premium Lettuces</h2>
             <div class="catalog-grid">
                 <div class="catalog-item">
