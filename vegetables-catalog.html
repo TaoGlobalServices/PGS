@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <style>
-        /* Exact same styling as main page for consistency */
         :root {
             --primary: #1E3A5F; 
             --secondary: #2C5282; 
@@ -50,18 +49,18 @@
         .btn-back:hover { color: white; }
 
         /* CATALOG GRID */
-        .catalog-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 30px; margin-top: 40px; }
-        .catalog-item { background: white; border: 1px solid #E2E8F0; border-radius: 8px; overflow: hidden; box-shadow: var(--shadow-card); }
+        .catalog-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 30px; margin-top: 40px; }
+        .catalog-item { background: white; border: 1px solid #E2E8F0; border-radius: 8px; overflow: hidden; box-shadow: var(--shadow-card); display: flex; flex-direction: column;}
         .catalog-item img { width: 100%; height: 250px; object-fit: cover; border-bottom: 3px solid var(--accent); }
-        .item-info { padding: 25px; }
+        .item-info { padding: 25px; display: flex; flex-direction: column; flex-grow: 1;}
         .item-info h3 { font-size: 1.3rem; margin-bottom: 10px; }
-        .item-info p { color: var(--text-gray); font-size: 0.95rem; margin-bottom: 15px; }
+        .item-info p { color: var(--text-gray); font-size: 0.95rem; margin-bottom: 15px; flex-grow: 1;}
         
         .spec-list { list-style: none; margin-bottom: 20px; padding-top: 15px; border-top: 1px solid #E2E8F0; }
         .spec-list li { font-size: 0.9rem; margin-bottom: 8px; color: var(--text-dark); }
         .spec-list strong { color: var(--primary); }
 
-        .btn-gold { background: var(--accent); color: white; padding: 12px 20px; text-decoration: none; border-radius: 4px; display: block; text-align: center; font-weight: 600; transition: var(--transition); }
+        .btn-gold { background: var(--accent); color: white; padding: 12px 20px; text-decoration: none; border-radius: 4px; display: block; text-align: center; font-weight: 600; transition: var(--transition); margin-top: auto;}
         .btn-gold:hover { background: #C58B47; }
         
         .float-btn { position: fixed; right: 25px; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 28px; box-shadow: 0 4px 15px rgba(0,0,0,0.2); z-index: 1000; text-decoration: none; }
@@ -99,7 +98,7 @@
         <div class="container">
             <a href="index.html#products" class="btn-back"><i class="fa-solid fa-arrow-left"></i> Back to All Catalogs</a>
             <h1>Fresh Vegetables Export</h1>
-            <p>Premium GAP-certified produce packed securely in EPS foam with ice gel packs for air freight.</p>
+            <p>Premium GAP-certified produce packed securely in EPS foam with ice gel packs to guarantee cold-chain integrity during air freight.</p>
         </div>
     </section>
 
@@ -111,11 +110,11 @@
                     <img src="assets/asparagus.jpg" alt="Thai Asparagus" onerror="this.src='https://via.placeholder.com/400x300?text=Asparagus';">
                     <div class="item-info">
                         <h3>Green Asparagus</h3>
-                        <p>Export-grade, straight spears with tight heads. Sourced from high-yield GAP farms.</p>
+                        <p>Export-grade, straight spears with tight heads. Cleaned, graded, and banded for hospitality use.</p>
                         <ul class="spec-list">
                             <li><strong>Sizes:</strong> S, M, L, XL</li>
-                            <li><strong>Packing:</strong> 10kg foam box</li>
-                            <li><strong>Shelf Life:</strong> 10-14 days at 2°C</li>
+                            <li><strong>Packing:</strong> 10kg EPS foam box + Ice Packs</li>
+                            <li><strong>Shipping:</strong> Air Freight</li>
                         </ul>
                         <a href="index.html#contact" class="btn-gold">Request Quote</a>
                     </div>
@@ -125,11 +124,11 @@
                     <img src="assets/babycorn.jpg" alt="Baby Corn" onerror="this.src='https://via.placeholder.com/400x300?text=Baby+Corn';">
                     <div class="item-info">
                         <h3>Baby Corn (Peeled)</h3>
-                        <p>Freshly harvested and safely peeled under hygienic conditions for immediate culinary use.</p>
+                        <p>Freshly harvested and peeled under strict hygienic conditions. Ready for immediate commercial culinary use.</p>
                         <ul class="spec-list">
-                            <li><strong>Sizes:</strong> Standard export grade</li>
-                            <li><strong>Packing:</strong> 10kg foam box</li>
-                            <li><strong>Shelf Life:</strong> 7-10 days at 5°C</li>
+                            <li><strong>Sizes:</strong> Standard export grade (A)</li>
+                            <li><strong>Packing:</strong> 10kg EPS foam box + Ice Packs</li>
+                            <li><strong>Shipping:</strong> Air Freight</li>
                         </ul>
                         <a href="index.html#contact" class="btn-gold">Request Quote</a>
                     </div>
@@ -139,11 +138,53 @@
                     <img src="assets/lemongrass.jpg" alt="Lemongrass" onerror="this.src='https://via.placeholder.com/400x300?text=Lemongrass';">
                     <div class="item-info">
                         <h3>Fresh Lemongrass</h3>
-                        <p>Highly aromatic, thick stalks ideal for Asian cuisine and hospitality kitchens.</p>
+                        <p>Highly aromatic, thick stalks ideal for Asian cuisine, resort kitchens, and spa applications.</p>
                         <ul class="spec-list">
-                            <li><strong>Length:</strong> Cut to 30cm or custom</li>
-                            <li><strong>Packing:</strong> 10kg / 15kg cartons</li>
-                            <li><strong>Shelf Life:</strong> 14-21 days at 10°C</li>
+                            <li><strong>Specs:</strong> Cut to 30cm or custom length</li>
+                            <li><strong>Packing:</strong> 10kg carton or foam box</li>
+                            <li><strong>Shipping:</strong> Air Freight</li>
+                        </ul>
+                        <a href="index.html#contact" class="btn-gold">Request Quote</a>
+                    </div>
+                </div>
+
+                <div class="catalog-item">
+                    <img src="assets/galangal.jpg" alt="Galangal" onerror="this.src='https://via.placeholder.com/400x300?text=Galangal';">
+                    <div class="item-info">
+                        <h3>Galangal Root (Kha)</h3>
+                        <p>Freshly dug, washed, and trimmed galangal root. A staple aromatic for authentic Thai and regional cooking.</p>
+                        <ul class="spec-list">
+                            <li><strong>Quality:</strong> Young or Mature available</li>
+                            <li><strong>Packing:</strong> 10kg EPS foam box</li>
+                            <li><strong>Shipping:</strong> Air Freight</li>
+                        </ul>
+                        <a href="index.html#contact" class="btn-gold">Request Quote</a>
+                    </div>
+                </div>
+
+                <div class="catalog-item">
+                    <img src="assets/kaffir-lime-leaves.jpg" alt="Kaffir Lime Leaves" onerror="this.src='https://via.placeholder.com/400x300?text=Kaffir+Lime+Leaves';">
+                    <div class="item-info">
+                        <h3>Kaffir Lime Leaves (Makrut)</h3>
+                        <p>Hand-picked, dark green double-leaves. Inspected carefully to ensure zero pest damage before packing.</p>
+                        <ul class="spec-list">
+                            <li><strong>Quality:</strong> Premium Grade A</li>
+                            <li><strong>Packing:</strong> Loose packed in foam box</li>
+                            <li><strong>Shipping:</strong> Air Freight</li>
+                        </ul>
+                        <a href="index.html#contact" class="btn-gold">Request Quote</a>
+                    </div>
+                </div>
+
+                <div class="catalog-item">
+                    <img src="assets/thai-chili.jpg" alt="Thai Chili" onerror="this.src='https://via.placeholder.com/400x300?text=Thai+Chili';">
+                    <div class="item-info">
+                        <h3>Bird's Eye Chili (Prik Kee Noo)</h3>
+                        <p>Vibrant red and green chilis, sorted to remove any soft or unmarketable pieces. Extremely high heat profile.</p>
+                        <ul class="spec-list">
+                            <li><strong>Colors:</strong> Red, Green, or Mixed</li>
+                            <li><strong>Packing:</strong> 5kg or 10kg EPS foam box</li>
+                            <li><strong>Shipping:</strong> Air Freight</li>
                         </ul>
                         <a href="index.html#contact" class="btn-gold">Request Quote</a>
                     </div>
