@@ -25,7 +25,6 @@
 
     <style>
         :root {
-            /* Updated to navy blue/gold theme to match the new logo */
             --primary: #1E3A5F; 
             --secondary: #2C5282; 
             --accent: #D9A05B; 
@@ -38,7 +37,7 @@
         }
 
         * { box-sizing: border-box; margin: 0; padding: 0; }
-        html { scroll-behavior: smooth; }
+        html { scroll-behavior: smooth; scroll-padding-top: 80px; }
         body { 
             font-family: 'Montserrat', sans-serif; 
             background-color: var(--white); 
@@ -64,14 +63,13 @@
             position: fixed; top: 0; width: 100%; z-index: 1000; 
             background: rgba(255, 255, 255, 0.98); 
             box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-            padding: 15px 0; /* Adjusted padding slightly */
+            padding: 15px 0;
             transition: var(--transition);
         }
         header.scrolled { padding: 10px 0; }
         
         .logo { text-decoration: none; color: var(--primary); font-weight: 800; font-size: 1.4rem; display: flex; align-items: center; gap: 12px;} 
         
-        /* New class to control the 1000x1000px logo size */
         .header-logo { height: 50px; width: auto; object-fit: contain; transition: var(--transition); }
         header.scrolled .header-logo { height: 40px; }
 
@@ -121,11 +119,16 @@
         .trust-item p { font-size: 0.95rem; color: var(--text-gray); }
 
         .grid-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-top: 40px; }
-        .product-card { background: white; border-radius: 8px; overflow: hidden; box-shadow: var(--shadow-card); transition: var(--transition); display: flex; flex-direction: column; border: 1px solid #E2E8F0; }
-        .product-card:hover { transform: translateY(-5px); border-color: var(--accent); }
-        .product-card img { width: 100%; height: 220px; object-fit: cover; }
+        
+        /* UPDATED PRODUCT CARD CSS */
+        a.product-card { 
+            background: white; border-radius: 8px; overflow: hidden; box-shadow: var(--shadow-card); transition: var(--transition); display: flex; flex-direction: column; border: 1px solid #E2E8F0;
+            text-decoration: none; color: inherit; cursor: pointer;
+        }
+        a.product-card:hover { transform: translateY(-5px); border-color: var(--accent); }
+        a.product-card img { width: 100%; height: 220px; object-fit: cover; }
         .card-body { padding: 30px; flex-grow: 1; }
-        .card-body h3 { font-size: 1.25rem; margin-bottom: 15px; border-bottom: 1px solid #E2E8F0; padding-bottom: 10px; }
+        .card-body h3 { font-size: 1.25rem; margin-bottom: 15px; border-bottom: 1px solid #E2E8F0; padding-bottom: 10px; color: var(--primary); }
         
         .spec-list { list-style: none; }
         .spec-list li { font-size: 0.95rem; margin-bottom: 12px; color: var(--text-dark); display: flex; align-items: flex-start; gap: 12px; }
@@ -179,7 +182,7 @@
     <header id="main-header">
         <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
             <a href="#" class="logo">
-                <img src="assets/logo.png" alt="PGS Logo" class="header-logo">
+                <img src="assets/logo.png" alt="PGS Logo" class="header-logo" onerror="this.src='https://via.placeholder.com/50x50?text=Logo';">
                 Prestige Global Supply Co.,ltd
             </a>
 
@@ -335,7 +338,7 @@
             <div class="container">
                 <h2>Buyer Profiles</h2>
                 <div class="grid-cards">
-                    <div class="product-card" style="border-top: 4px solid var(--accent);">
+                    <div class="product-card" style="border-top: 4px solid var(--accent); background: white; border-radius: 8px; overflow: hidden; box-shadow: var(--shadow-card);">
                         <div class="card-body">
                             <h3>Hotel Procurement</h3>
                             <ul class="spec-list">
@@ -345,7 +348,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="product-card" style="border-top: 4px solid var(--accent);">
+                    <div class="product-card" style="border-top: 4px solid var(--accent); background: white; border-radius: 8px; overflow: hidden; box-shadow: var(--shadow-card);">
                         <div class="card-body">
                             <h3>Importers & Distributors</h3>
                             <ul class="spec-list">
@@ -355,7 +358,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="product-card" style="border-top: 4px solid var(--accent);">
+                    <div class="product-card" style="border-top: 4px solid var(--accent); background: white; border-radius: 8px; overflow: hidden; box-shadow: var(--shadow-card);">
                         <div class="card-body">
                             <h3>Wholesale Markets</h3>
                             <ul class="spec-list">
@@ -373,11 +376,11 @@
             <div class="container">
                 <div style="text-align: center; margin-bottom: 50px;">
                     <h2>Commercial Export Catalog</h2>
-                    <p style="color: var(--text-gray); font-size: 1.1rem;">Graded products, calculated supply metrics, and precise commercial packaging.</p>
+                    <p style="color: var(--text-gray); font-size: 1.1rem;">Graded products, calculated supply metrics, and precise commercial packaging. Click a category to view items.</p>
                 </div>
                 
                 <div class="grid-cards">
-                    <div class="product-card">
+                    <a href="vegetables-catalog.html" class="product-card">
                         <img src="assets/vegetables.jpg" alt="Thai Vegetables Export" onerror="this.src='https://via.placeholder.com/600x400?text=Fresh+Vegetables';">
                         <div class="card-body">
                             <h3>Fresh Vegetables</h3>
@@ -388,9 +391,9 @@
                                 <li><i class="fa-solid fa-list-check"></i> <strong>Items:</strong> Asparagus, Baby Corn, Lemongrass, Sweet Basil</li>
                             </ul>
                         </div>
-                    </div>
+                    </a>
 
-                    <div class="product-card">
+                    <a href="fruits-catalog.html" class="product-card">
                         <img src="assets/fruits.jpg" alt="Thai Fruits Export" onerror="this.src='https://via.placeholder.com/600x400?text=Tropical+Fruits';">
                         <div class="card-body">
                             <h3>Tropical Fruits</h3>
@@ -401,9 +404,9 @@
                                 <li><i class="fa-solid fa-list-check"></i> <strong>Items:</strong> Mango, Mangosteen, Durian, Rambutan</li>
                             </ul>
                         </div>
-                    </div>
+                    </a>
 
-                    <div class="product-card">
+                    <a href="poultry-catalog.html" class="product-card">
                         <img src="assets/chicken.jpg" alt="Frozen Poultry Export" onerror="this.src='https://via.placeholder.com/600x400?text=Frozen+Poultry';">
                         <div class="card-body">
                             <h3>Frozen Poultry</h3>
@@ -414,9 +417,9 @@
                                 <li><i class="fa-solid fa-list-check"></i> <strong>Certs:</strong> Halal & GMP Processing</li>
                             </ul>
                         </div>
-                    </div>
+                    </a>
 
-                    <div class="product-card">
+                    <a href="coconut-catalog.html" class="product-card">
                         <img src="assets/coconut.jpg" alt="Thai Coconuts Export" onerror="this.src='https://via.placeholder.com/600x400?text=Fragrant+Coconuts';">
                         <div class="card-body">
                             <h3>Fragrant Coconuts</h3>
@@ -427,7 +430,7 @@
                                 <li><i class="fa-solid fa-list-check"></i> <strong>Variety:</strong> Standardized "Nam Hom"</li>
                             </ul>
                         </div>
-                    </div>
+                    </a>
                 </div>
             </div>
         </section>
